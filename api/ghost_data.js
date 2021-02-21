@@ -2,9 +2,13 @@ import GhostContentAPI from '@tryghost/content-api'
 
 // Create API instance with site credentials
 // (replace <api url> and <content key> with your own credentials
+
+// http://localhost:2368
+// key: '877504ee46224eb3ca847c242b',
+
 const api = new GhostContentAPI({
-  url: 'http://localhost:2368',
-  key: '877504ee46224eb3ca847c242b',
+  url: 'https://demo.ghost.io', 
+  key: '22444f78447824223cefc48062',
   version: 'v3',
 })
 
