@@ -20,11 +20,10 @@ export async function getPosts() {
 }
 
 
-export async function getSinglePost(postSlug, authors) {
+export async function getSinglePost(postSlug) {
   return await api.posts
     .read({
       slug: postSlug,
-      authors: authors,
     })
 
     .catch((err) => {
