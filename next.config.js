@@ -3,3 +3,6 @@ module.exports = {
       domains: ['digitalpress.fra1.cdn.digitaloceanspaces.com', 'static.ghost.org'],
     },
   }
+
+
+  

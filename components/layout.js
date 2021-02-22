@@ -14,7 +14,7 @@ export default function Layout({ home, _title, children }) {
         <main>
           <div
             id="content"
-            className="container p-6 max-w-screen-lg mt-6 mx-auto"
+            className="p-6 max-w-screen-lg mt-6 mx-auto w-full"
           >
             {children}
           </div>

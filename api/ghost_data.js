@@ -7,7 +7,7 @@ import GhostContentAPI from '@tryghost/content-api'
 // key: '877504ee46224eb3ca847c242b',
 
 const api = new GhostContentAPI({
-  url: 'https://theessay365.digitalpress.blog', 
+  url: 'https://theessay365.digitalpress.blog',
   key: '455d933f8d126f7dc52d5aab3d',
   version: 'v3',
 })
@@ -24,6 +24,17 @@ export async function getPosts() {
 }
 
 
+export async function getFeaturePosts() {
+  return await api.posts
+    .browse({
+      include: 'tags,authors',
+      limit: 'all',
+      filter: 'featured:true',
+    })
+    .catch((err) => {
+      console.error(err)
+    })
+}
 
 
 

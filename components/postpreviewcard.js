@@ -7,7 +7,7 @@ export default function BlogPreviewCard({ blogpost }) {
 
 
 
-    <div className="my-12">
+    <div className="m-3">
 
       <div className="flex justify-start md:justify-center items-center">
         <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>  </Link>
