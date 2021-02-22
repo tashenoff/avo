@@ -1,5 +1,5 @@
 import '../styles/tailwind.css'
-import '../styles/globalstyles.scss'
+import '../styles/globalstyles.css'
 import '../styles/blogInnerHtml.css'
 import NextNprogress from 'nextjs-progressbar';
 import { ThemeProvider } from "next-themes";
