@@ -1,6 +1,8 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function BlogPreviewCard({ blogpost }) {
+
   return (
 
 
@@ -8,15 +10,22 @@ export default function BlogPreviewCard({ blogpost }) {
     <div className="my-12">
 
       <div className="flex justify-start md:justify-center items-center">
-        <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
-          <img className="m-8 rounded-l h-50 " src={blogpost.feature_image} />
-        </Link>
-     
-      
+        <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>  </Link>
+       
+        <Image className="object-cover"
+          src={`${blogpost.feature_image}`}
+          alt={`${blogpost.title}`}
+          width={500}
+          height={500}
+
+        />
+
+
+
       </div>
       <div className="flex md:pt-4">
         <div className="ml-5">
-          <p className="text-gray-500 text-sm">
+          <p className="text-sm">
 
             {blogpost.tags.map((tag) => (
               <span className="mr-3">
@@ -27,15 +36,15 @@ export default function BlogPreviewCard({ blogpost }) {
             ))}
 
             {blogpost.authors.map((author) => (
-           <p>автор {author.name}</p>
-          ))}
+              <p>автор {author.name}</p>
+            ))}
 
           </p>
           <p>{blogpost.dateFormatted}</p>
           <hr />
           <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
             <a>
-              <h1 className="text-2xl font-bold text-indigo-900">
+              <h1 className="text-2xl font-bold">
                 {blogpost.title}
               </h1>
             </a>
@@ -45,7 +54,7 @@ export default function BlogPreviewCard({ blogpost }) {
             dangerouslySetInnerHTML={{ __html: blogpost.excerpt }}
           />
           <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
-            <a className="text-indigo-900">...read more</a>
+            <a className="">...read more</a>
           </Link>
         </div>
       </div>

@@ -3,36 +3,34 @@ import styles from '../styles/Home.module.css'
 import { getPosts, getPages } from '../api/ghost_data'
 import Layout from '../components/layout'
 import Link from 'next/link'
-import Navlinks from '../components/Navlinks'
+import {useState } from 'react'
 
-export default function Home({ posts, pages }) {
+export default function AllPost({ posts, pages }) {
+  
+  const [ postNum, setPostNum] = useState(6); // Default number of posts dislplayed
+
+  function handleClick() {
+    setPostNum(prevPostNum => prevPostNum + 3) // 3 is the number of posts you want to load per click
+  }
+
   console.log(posts)
-  const postNum='4'
   return (
-    <Layout home _title="My Ghost Blog">
-
-
-      
+    <Layout AllPost _title="all post">
       <ul className='grid grid-cols-3 gap-4 mb-8 border-b-2 border-gray-100 border-dotted'>   
-      {posts.slice(0, postNum).map(post => (
-          
+        {posts.slice(0, postNum).map(post => (
           <li>
             <PostPreviewCard blogpost={post} />
-            
           </li>
         ))}
-        
+         <button onClick={handleClick}>Load More</button>
       </ul>
-      
-      <div className="container mx-auto w-full border border-white">
-      <Link href="/AllPost">
-        <a>Загрузить все посты</a>
-        </Link>
-      </div>
 
   
+
       {pages.map((page) => (
-      <Navlinks Navlink={page} />
+         <Link href="/page/[slug]" as={`/page/${page.slug}`}>
+            <a className="text-indigo-900">{page.title}</a>
+          </Link>
       ))}
 
     </Layout>

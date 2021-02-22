@@ -1,39 +1,49 @@
 import { getPosts, getSinglePost } from '../../api/ghost_data'
 import Link from 'next/link'
 import Layout from '../../components/layout'
+import Head from 'next/head'
 
 // PostPage page component
 export default function PostPage({ post }) {
   // Render post title and content in the page from props
-  let _title = post.title + ' - My blog'
+  // let _title = post.title + ' - My blog'
+
   console.log(post)
   return (
-    <Layout _title={_title}>
-      <div className="blogInnerHTML">
-        <h1>{post.title}</h1>
+    <>
+      <Head>
+      
+      <title>hello</title>  {/* //не работает */}
+      <meta name="keywords" content={ post.excerpt } />
+      </Head>
 
-     
-           {/* <p>автор {author.name}</p> */}
-       
+      <Layout>
+        <div className="blogInnerHTML">
+          <h1>{post.title}</h1>
 
 
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
-      </div>
-      <Link href="/Home" as={'/'}>
-        <a>-- go to homepage --</a>
-      </Link>
-    </Layout>
+          {/* <p>автор {author.name}</p> */}
+
+
+
+          <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        </div>
+        <Link href="/" as={'/'}>
+          <a>-- go to homepage --</a>
+        </Link>
+      </Layout>
+    </>
   )
 }
 
 export async function getStaticPaths() {
   const posts = await getPosts()
   const paths = posts.map((post) => ({
-    params: { 
-      
+    params: {
+
       slug: post.slug,
-      author: post.author, 
-    
+      author: post.author,
+
     },
   }))
   return { paths, fallback: false }
@@ -45,9 +55,11 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }) {
 
   const post = await getSinglePost(params.slug)
-  return { props: { 
-    post: post,
- 
-  
-  } }
+  return {
+    props: {
+      post: post,
+
+
+    }
+  }
 }
