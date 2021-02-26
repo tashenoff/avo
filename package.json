@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@tryghost/content-api": "^1.4.10",
+    "@tryghost/content-api": "^1.4.10", 
     "autoprefixer": "^10.0.4",
     "classnames": "^2.2.6",
     "fuse.js": "^6.4.6",
