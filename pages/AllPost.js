@@ -41,11 +41,7 @@ export default function AllPost({ posts, pages }) {
     }
   };
 
-
- 
-
-// console.log('title', fuse.searchData('{Хостинг}'))
-
+  // console.log('title', fuse.searchData('{Хостинг}'))
   
   return (
     <Layout AllPost _title="all post">
