@@ -24,7 +24,7 @@ export default function TagOverview({ tagObjects }) {
                         {post.title}
                       </h3>
                       {/* TODO refactor START */}
-                      <p className="text-gray-600 text-xs">
+                      <p className="text-xs">
                         {new Intl.DateTimeFormat('default', {
                           year: 'numeric',
                           month: 'short',

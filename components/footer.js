@@ -1,8 +1,12 @@
 import Link from 'next/link'
+import Content from './Content'
+
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 w-full">
+    <footer className="bg-new-blue w-full">
+      <Content>
+     
       <div className="flex w-full py-4">
         <div className="flex w-1/2 px-5">
           <Link href="/blogpages/[slug]" as="/blogpages/copyright">
@@ -34,6 +38,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      </Content>
     </footer>
   )
 }
