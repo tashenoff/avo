@@ -33,19 +33,38 @@ export default function AllPost({ posts, pages }) {
     const matches = [];
     if (!result.length) {
       setData([]);
-    } else {
+    } 
+    else {
       result.forEach(({item}) => {
         matches.push(item);
       });
       setData(matches);
+      
     }
+    
   };
+
+
+  // const searchData = (pattern) => {
+  //   if (!pattern) {
+  //     setData(posts);
+  //     return;
+  //   }
+
+  //   const fuse = new Fuse(data, {
+  //     keys: ["title", "excerpt"],
+  //   });
+
+  //   const result = fuse.search(pattern)
+  //   setData(result.length ? result : console.log('not found'), [])
+  // };
+
 
   // console.log('title', fuse.searchData('{Хостинг}'))
   
   return (
     <Layout AllPost _title="all post">
-      <Banner className="dark:bg-new-blue">
+      <Banner className="dark:bg-new-blue bg-new-green text-white">
       <h1 className="text-3xl font-bold">Статьи</h1>
       <p className="py-5">
       We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery. 

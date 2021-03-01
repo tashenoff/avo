@@ -4,7 +4,7 @@ import classNames from 'classNames'
 const Button = ({ title, className, onClick, ...attrs }) => {
 
   const classes = classNames (
-    'px-10 py-3',
+    'px-5 py-3 rounded-lg',
     className
   );
   return (

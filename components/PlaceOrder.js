@@ -1,9 +1,10 @@
 import React from 'react'
 
-const PlaceOrder = () => {
+const PlaceOrder = ({className, children}) => {
     return (
-        <div >
-            
+        <div className={className} >
+            { children }
+          
         </div>
     )
 }

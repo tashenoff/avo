@@ -11,7 +11,11 @@ const Navbar = () => {
 
           <div className="flex py-3 justify-between items-center">
             <div>
+            <Link href="/">
+            <a>
             Essay365
+            </a>
+            </Link>
               </div>
             <div className='flex items-center'>
               <div>
