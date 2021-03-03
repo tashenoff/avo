@@ -3,10 +3,8 @@ import Link from 'next/link'
 import Layout from '../../components/layout'
 import Head from 'next/head'
 
-// PostPage page component
 export default function PostPage({ post }) {
-  // Render post title and content in the page from props
-  // let _title = post.title + ' - My blog'
+
 
   console.log(post)
   return (
@@ -20,10 +18,6 @@ export default function PostPage({ post }) {
       <Layout>
         <div className="blogInnerHTML">
           <h1>{post.title}</h1>
-
-
-          {/* <p>автор {author.name}</p> */}
-
 
 
           <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -48,9 +42,6 @@ export async function getStaticPaths() {
   }))
   return { paths, fallback: false }
 }
-
-// Pass the page slug over to the "getSinglePost" function
-// In turn passing it to the posts.read() to query the Ghost Content API
 
 export async function getStaticProps({ params }) {
 

@@ -1,11 +1,5 @@
 import GhostContentAPI from '@tryghost/content-api'
 
-// Create API instance with site credentials
-// (replace <api url> and <content key> with your own credentials
-
-// http://localhost:2368
-// key: '877504ee46224eb3ca847c242b',
-
 const api = new GhostContentAPI({
   url: 'https://theessay365.digitalpress.blog',
   key: '455d933f8d126f7dc52d5aab3d',
