@@ -1,16 +1,16 @@
 import classNames from 'classNames'
 
-const Input = ({placeholder, type, className}) => {
+const Input = ({placeholder, type, onChange, className}) => {
     
     const classes = classNames (
-        'p-3 rounded-lg',
+        'p-3 rounded-lg focus:outline-none text-gray-800',
         className
       );
 
 
     return (
      
-     <input className={classes} placeholder={placeholder} type={type}></input>
+     <input onChange={onChange} className={classes} placeholder={placeholder} type={type}></input>
         )
 }
 

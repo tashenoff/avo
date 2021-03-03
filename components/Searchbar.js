@@ -1,13 +1,23 @@
-// import React, { useState } from 'react'
+import React, { useState } from 'react'
 import Button from './button'
-
+const [searchTerm, setSearchTerm ]=useState('');
 
 const Searchbar = () => {
     return (
         <div className="py-5">
-          
+            <form>
+                <div className="flex items-center">
+                    <div className="bg-white p-3 flex justify-center items-center border-2 border-white">
+                        <svg className="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                    <input onChange={(event) => { setSearchTerm(event.target.value); }} placeholder="поиск статьи" name="" className="py-3 px-1 text-new-blue focus:outline-none w-full"></input>
+                </div>
+            </form>
         </div>
 
+{}
 
     )
 }

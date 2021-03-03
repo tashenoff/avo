@@ -12,7 +12,7 @@ export default function BlogPreviewCard({ blogpost }) {
       <div className="flex justify-start md:justify-center items-center">
         <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>  </Link>
        
-        <Image className="object-cover"
+        <Image className="object-cover rounded-lg"
           src={`${blogpost.feature_image}`}
           alt={`${blogpost.title}`}
           width={500}

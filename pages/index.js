@@ -13,6 +13,9 @@ import PlaceOrder from '../components/PlaceOrder'
 import Man from '../components/svg/man'
 import Input from '../components/Input'
 import Form from '../components/Form'
+import H1 from '../components/H1'
+import Flower from '../components/svg/flower'
+import Select from '../components/Select'
 
 // import Image from 'next/image'
 // import { icons } from '../assets/img/ico_1.svg'
@@ -26,18 +29,16 @@ export default function Home({ posts, pages }) {
     <>
       <Layout
         home _title="My Ghost Blog">
-        <Banner
+        <Banner title_banner="ddd"
           className='bg-new-green relative text-new-blue h-96 flex flex-col items-center justify-between  dark:bg-dark-blue dark:text-white'>
-
-
-          <div className="flex w-full relative justify-between container items-center">
+          <div className="flex w-full absolute -bottom-10 justify-between container items-center">
             <div className="flex flex-col max-w-3xl">
-              <h1 className="text-3xl font-bold mt-5">11Essay writing service for students</h1>
+              <H1 title="11Essay writing service for students" />
               <p class="py-5 w-1/2">7Academic writing is difficult, and at Writix, we only work with the best of the best when it comes to our writers.</p>
               <PlaceOrder className="bg-light-blue bottom-0 w-1/1 h-1/2 p-5 rounded-lg ">
                 <Form className="flex flex-col w-full">
                   <div className="flex w-full">
-                    <Input placeholder="2Essay (Any Type)" className="bg-white mr-4  w-full" />
+                    <Select className="bg-white mr-4  w-full"/>
                     <Input placeholder="3Email" className="bg-white mr-4  w-full" />
                     <Button className="bg-orange w-1/2" title="5Place an order" />
                   </div>
@@ -45,17 +46,17 @@ export default function Home({ posts, pages }) {
                 </Form>
               </PlaceOrder>
             </div>
-            <Man />
+            <Man className="absolute bottom-0 right-28"/>
+            <Flower className="absolute bottom-0 right-0"/>
           </div>
 
 
         </Banner>
 
-        <Content className="py-10">
-          <h1 className="text-3xl font-bold">6The best of the best writers</h1>
-
+        <Content className="py-10 mt-20">
+          <H1 isBordered={true} title="16The best of the best writers" />
           <p className="py-5">
-            7Academic writing is difficult, and at Writix, we only work with the best of the best when it comes to our writers.
+            17Academic writing is difficult, and at Writix, we only work with the best of the best when it comes to our writers.
             </p>
 
           <p className="py-5 w-full">We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery. First of all, we check for duplicate content on the web and then in our database of completed orders. Feel free to request free revisions of your order, and we will adjust it to your requirements.We won’t take your money until you are happy with a result.</p>
@@ -75,29 +76,28 @@ to place your order.</p>
         </Banner>
 
         <Content className="p-3 flex w-full justify-between items-center">
-          <h1 className="text-3xl font-bold py-5">Полезные статьи</h1>
-
-          <Link href="/AllPost">
-            <a>показать все...</a>
-          </Link>
+          <H1 title="Полезные статьи"/>
+            <Link href="/AllPost">
+              <a>показать все...</a>
+            </Link>
         </Content>
-        <Content>
-          <SliderPost>
-            {posts.slice(0, postNum).map(post => (
-              <div>
-                <PostPreviewCard blogpost={post} />
-              </div>
-            ))}
-          </SliderPost>
-        </Content>
+          <Content>
+            <SliderPost>
+              {posts.slice(0, postNum).map(post => (
+                <div>
+                  <PostPreviewCard blogpost={post} />
+                </div>
+              ))}
+            </SliderPost>
+          </Content>
 
 
 
 
 
-        {pages.map((page) => (
-          <Navlinks Navlink={page} />
-        ))}
+          {pages.map((page) => (
+            <Navlinks Navlink={page} />
+          ))}
 
 
       </Layout>
@@ -118,7 +118,7 @@ export async function getStaticProps() {
 
   posts.map((post) => {
     const options = {
-      year: 'numeric',
+        year: 'numeric',
       month: 'long',
       day: "2-digit"
     }
@@ -130,9 +130,9 @@ export async function getStaticProps() {
 
 
   return {
-    props: {
-      posts,
-      pages,
+        props: {
+        posts,
+        pages,
 
 
     },

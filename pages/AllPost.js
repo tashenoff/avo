@@ -8,6 +8,9 @@ import Content from '../components/Content'
 import Searchbar from '../components/Searchbar'
 import Banner from '../components/Banner'
 import Fuse from "fuse.js";
+import H1 from '../components/H1'
+import Form from '../components/Form'
+import Input from '../components/Input'
 
 
 export default function AllPost({ posts, pages }) {
@@ -15,7 +18,7 @@ export default function AllPost({ posts, pages }) {
   function handleClick() {
     setPostNum(prevPostNum => prevPostNum + 3) // 3 is the number of posts you want to load per click
   }
-  
+
   // const [postNum, setPostNum] = useState(6); 
   const [data, setData] = useState(posts);
 
@@ -33,15 +36,15 @@ export default function AllPost({ posts, pages }) {
     const matches = [];
     if (!result.length) {
       setData([]);
-    } 
+    }
     else {
-      result.forEach(({item}) => {
+      result.forEach(({ item }) => {
         matches.push(item);
       });
       setData(matches);
-      
+
     }
-    
+
   };
 
 
@@ -61,33 +64,34 @@ export default function AllPost({ posts, pages }) {
 
 
   // console.log('title', fuse.searchData('{Хостинг}'))
-  
+
   return (
     <Layout AllPost _title="all post">
       <Banner className="dark:bg-new-blue bg-new-green text-white">
-      <h1 className="text-3xl font-bold">Статьи</h1>
-      <p className="py-5">
-      We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery. 
+        <H1 title="Статьи" />
+        <p className="py-5">
+          We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery.
             </p>
-            <Searchbar />
+        <Searchbar />
 
 
-            <form>
-                <div className="flex items-center">
-                    <div className="bg-white p-3 flex justify-center items-center border-2 border-white">
-                        <svg className="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
-                        </svg>
-                    </div>
-                    <input  onChange={(e) => searchData(e.target.value)} placeholder="поиск статьи по названию или тексту в статье" name="" className="py-3 px-1 text-new-blue focus:outline-none w-full"></input>
+        <Form>
+          <div className="flex items-center bg-white rounded-lg">
+            <div className="bg-white p-3 flex justify-center items-center border-2 rounded-l-lg border-white">
+              <svg className="w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
+              </svg>
+            </div>
+            <Input onChange={(e) => searchData(e.target.value)} placeholder="поиск статьи по названию или тексту в статье" name="" className="text-new-blue focus:outline-none w-full"/>
+           
 
-              
-                </div>
-            </form>
+
+          </div>
+        </Form>
 
       </Banner>
       <Content>
-    
+
         <ul className='grid grid-cols-4 gap-3 mt-5 mb-8 border-b-2 border-gray-100 border-dotted'>
           {data.map(post => (
             <li>

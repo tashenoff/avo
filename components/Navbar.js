@@ -35,8 +35,9 @@ const Navbar = () => {
                   <a className="text-white px-8 truncate">Legal</a>
                 </Link>
               </div>
-        
+              <Link href="/Login">
               <Button className="bg-new-green" title="Sign Up"/>
+              </Link>
             </div>
           </div>
         </div>
