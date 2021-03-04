@@ -16,6 +16,7 @@ import Form from '../components/Form'
 import H1 from '../components/H1'
 import Flower from '../components/svg/flower'
 import Select from '../components/Select'
+import Feedback from '../components/Feedback/Feedback'
 
 // import Image from 'next/image'
 // import { icons } from '../assets/img/ico_1.svg'
@@ -38,7 +39,7 @@ export default function Home({ posts, pages }) {
               <PlaceOrder className="bg-light-blue bottom-0 w-1/1 h-1/2 p-5 rounded-lg ">
                 <Form className="flex flex-col w-full">
                   <div className="flex w-full">
-                    <Select className="bg-white mr-4  w-full"/>
+                    <Select className="bg-white mr-4  w-full" />
                     <Input placeholder="3Email" className="bg-white mr-4  w-full" />
                     <Button className="bg-orange w-1/2" title="5Place an order" />
                   </div>
@@ -46,8 +47,8 @@ export default function Home({ posts, pages }) {
                 </Form>
               </PlaceOrder>
             </div>
-            <Man className="absolute bottom-0 right-28"/>
-            <Flower className="absolute bottom-0 right-0"/>
+            <Man className="absolute bottom-0 right-28" />
+            <Flower className="absolute bottom-0 right-0" />
           </div>
 
 
@@ -75,29 +76,39 @@ to place your order.</p>
           <Steps />
         </Banner>
 
+        
+          <div className="flex items-center flex-col mt-10">
+            <H1 isBordered={true} title="21Students’ Feedback about Our Paper Writers" />
+            <p className="w-full text-center mb-10">22We’re always meticulous when it comes to paper writing and feedback we get on it. See what other students have to say about their experience with our essay paper writing service:
+</p>
+          </div>
+          <Feedback />
+     
+
         <Content className="p-3 flex w-full justify-between items-center">
-          <H1 title="Полезные статьи"/>
-            <Link href="/AllPost">
-              <a>показать все...</a>
-            </Link>
+          <H1 title="Полезные статьи" />
+          <Link href="/AllPost">
+            <a>показать все...</a>
+          </Link>
         </Content>
-          <Content>
-            <SliderPost>
-              {posts.slice(0, postNum).map(post => (
-                <div>
-                  <PostPreviewCard blogpost={post} />
-                </div>
-              ))}
-            </SliderPost>
-          </Content>
+
+        <Content>
+          <SliderPost>
+            {posts.slice(0, postNum).map(post => (
+              <div>
+                <PostPreviewCard blogpost={post} />
+              </div>
+            ))}
+          </SliderPost>
+        </Content>
 
 
 
 
 
-          {pages.map((page) => (
-            <Navlinks Navlink={page} />
-          ))}
+        {pages.map((page) => (
+          <Navlinks Navlink={page} />
+        ))}
 
 
       </Layout>
@@ -118,7 +129,7 @@ export async function getStaticProps() {
 
   posts.map((post) => {
     const options = {
-        year: 'numeric',
+      year: 'numeric',
       month: 'long',
       day: "2-digit"
     }
@@ -130,9 +141,9 @@ export async function getStaticProps() {
 
 
   return {
-        props: {
-        posts,
-        pages,
+    props: {
+      posts,
+      pages,
 
 
     },

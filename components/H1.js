@@ -1,8 +1,8 @@
-import classNames from 'classNames'
+import classnames from 'classnames'
 import H1Bordered from '../components/H1Bordered'
 
 const H1 = ({ title, className, ...props }) => {
-  const classes = classNames(
+  const classes = classnames(
     'text-3xl font-bold mt-5',
     className
   );

@@ -1,8 +1,8 @@
-import classNames from 'classNames'
+import classname from 'classname'
 
 const Input = ({placeholder, type, onChange, className}) => {
     
-    const classes = classNames (
+    const classes = classname (
         'p-3 rounded-lg focus:outline-none text-gray-800',
         className
       );

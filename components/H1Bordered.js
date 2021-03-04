@@ -1,4 +1,4 @@
-import classNames from 'classNames'
+import classnames from 'classnames'
 
 const H1Bordered = ({ title, className, ...props }) => {
 

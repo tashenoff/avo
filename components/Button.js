@@ -1,14 +1,14 @@
 import React from 'react'
-// import classNames from 'classNames'
+import classnames from 'classnames'
 
 const Button = ({ title, className, onClick, ...attrs }) => {
 
-  // const classes = classNames (
-  //   'px-5 py-3 rounded-lg focus:outline-none h-12',
-  //   className
-  // );
+  const classes = classnames (
+    'px-5 py-3 rounded-lg focus:outline-none h-12',
+    className
+  );
   return (
-    <button {...attrs} onClick={onClick} className={className}>{title}</button>
+    <button {...attrs} onClick={onClick} className={classes}>{title}</button>
   )
 }
 

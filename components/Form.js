@@ -1,7 +1,7 @@
 import React from 'react'
-import classNames from 'classNames'
+import classnames from 'classnames'
 const Form = ({ children, className }) => {
-    const classes = classNames(
+    const classes = classnames(
         '',
         className
     );
