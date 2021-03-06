@@ -1,6 +1,6 @@
 import FeedbackStarList from './FeedbackStarList';
 export default {
-  title: 'FeedbackStarList',
+  title: '/FeedBack/FeedbackStarList',
   component: FeedbackStarList,
   argTypes: {
     className: { control: 'text' },
