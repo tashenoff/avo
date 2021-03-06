@@ -1,5 +1,5 @@
 import classnames from 'classnames'
-import H1Bordered from '../components/H1Bordered'
+
 
 const H1 = ({ title, className, ...props }) => {
   const classes = classnames(
@@ -9,7 +9,12 @@ const H1 = ({ title, className, ...props }) => {
 
   const isBordered = props.isBordered;
   if (isBordered) {
-    return <H1Bordered className={classes} title={title} />;
+    return (
+      <>
+      <h1 className={classes}>{title}</h1>
+      <div className="bg-new-green w-5 h-1 my-5"></div>
+      </>
+    );
   }
   return  <h1 className={classes}>{title}</h1>;
 

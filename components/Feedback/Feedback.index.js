@@ -1,6 +1,6 @@
 import Feedback from './Feedback';
 export default {
-  title: 'Feedback',
+  title: 'Composite/Feedback',
   component: Feedback,
   argTypes: {
     className: { control: 'text' },
