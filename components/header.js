@@ -1,6 +1,6 @@
 import Topbar from './Topbar'
 import Switch from "react-switch";
-import Navbar from './Navbar'
+import Navbar from '../components/navbar/Navbar'
 
 
 export default function Header({ home, children }) {

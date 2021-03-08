@@ -1,4 +1,4 @@
-import PostPreviewCard from '../components/postpreviewcard'
+import PostPreviewCard from '../components/PostItem/Postpreviewcard'
 import styles from '../styles/Home.module.css'
 import { getPosts, getPages } from '../api/ghost_data'
 import Layout from '../components/layout'
@@ -11,6 +11,7 @@ import Fuse from "fuse.js";
 import H1 from '../components/H1'
 import Form from '../components/Form'
 import Input from '../components/Input'
+import P from '../components/P'
 
 
 export default function AllPost({ posts, pages }) {
@@ -45,36 +46,14 @@ export default function AllPost({ posts, pages }) {
 
     }
 
-  };
+  }
 
-
-  // const searchData = (pattern) => {
-  //   if (!pattern) {
-  //     setData(posts);
-  //     return;
-  //   }
-
-  //   const fuse = new Fuse(data, {
-  //     keys: ["title", "excerpt"],
-  //   });
-
-  //   const result = fuse.search(pattern)
-  //   setData(result.length ? result : console.log('not found'), [])
-  // };
-
-
-  // console.log('title', fuse.searchData('{Хостинг}'))
 
   return (
     <Layout AllPost _title="all post">
       <Banner className="dark:bg-new-blue bg-new-green text-white">
         <H1 title="Статьи" />
-        <p className="py-5">
-          We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery.
-            </p>
-        <Searchbar />
-
-
+        <P className="py-5" text=" We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery." />
         <Form>
           <div className="flex items-center bg-white rounded-lg">
             <div className="bg-white p-3 flex justify-center items-center border-2 rounded-l-lg border-white">
@@ -82,8 +61,8 @@ export default function AllPost({ posts, pages }) {
                 <path fillRule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clipRule="evenodd" />
               </svg>
             </div>
-            <Input onChange={(e) => searchData(e.target.value)} placeholder="поиск статьи по названию или тексту в статье" name="" className="text-new-blue focus:outline-none w-full"/>
-           
+            <Input onChange={(e) => searchData(e.target.value)} placeholder="поиск статьи по названию или тексту в статье" name="" className="text-new-blue focus:outline-none w-full" />
+
 
 
           </div>

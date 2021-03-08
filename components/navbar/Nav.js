@@ -1,11 +1,10 @@
-import React from 'react'
 import classnames from 'classnames'
+const Nav = ({className, variant, children}) => {
 
-
-const Content = ({children, className}) => {
     const classes = classnames (
-        'xl:container mx-auto',
-        className
+        'p-2 z-10 top-0 w-full',
+        className,
+        variant
       );
 
     return (
@@ -15,4 +14,4 @@ const Content = ({children, className}) => {
     )
 }
 
-export default Content
+export default Nav

@@ -1,4 +1,4 @@
-import PostPreviewCard from '../components/postpreviewcard'
+import PostPreviewCard from '../components/PostItem/Postpreviewcard'
 import SliderPost from '../components/SliderPost'
 import { getFeaturePosts, getPages } from '../api/ghost_data'
 import Layout from '../components/layout'

@@ -1,7 +1,7 @@
 import React from 'react'
 import classnames from 'classnames'
 
-const Button = ({ title, className, onClick, variant  }) => {
+const Button = ({ title, className, onClick, variant, children  }) => {
 
   const classes = classnames (
     'px-5 py-3 rounded-lg focus:outline-none h-12',
@@ -9,7 +9,7 @@ const Button = ({ title, className, onClick, variant  }) => {
     variant
   );
   return (
-    <button onClick={onClick} className={classes}>{title}</button>
+    <button onClick={onClick} className={classes}>{title}{children}</button>
   )
 }
 

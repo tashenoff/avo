@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import Button from './button'
-const [searchTerm, setSearchTerm ]=useState('');
-
+import Input from "./Input";
 const Searchbar = () => {
+    const [searchTerm, setSearchTerm ]=useState('');
     return (
         <div className="py-5">
             <form>
@@ -16,8 +15,6 @@ const Searchbar = () => {
                 </div>
             </form>
         </div>
-
-{}
 
     )
 }
