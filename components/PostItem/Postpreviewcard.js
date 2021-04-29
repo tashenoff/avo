@@ -1,8 +1,12 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import PostTitle from './PostTitle'
+import PostDate from './PostDate'
+import PostTag from './PostTag'
+
 
 export default function BlogPreviewCard({ blogpost }) {
-
+console.log({blogpost})
   return (
 
 
@@ -10,7 +14,7 @@ export default function BlogPreviewCard({ blogpost }) {
     <div className="">
 
       <div className="flex justify-start md:justify-center items-center">
-        <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>  </Link>
+        <Link prefetch={!process.env.STORYBOOK} href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>  </Link>
        
         <Image className="object-cover rounded-lg"
           src={`${blogpost.feature_image}`}
@@ -29,8 +33,8 @@ export default function BlogPreviewCard({ blogpost }) {
 
             {blogpost.tags.map((tag) => (
               <span className="mr-3">
-                <Link href="/tags/[slug]" as={`/tags/${tag.slug}`}>
-                  <a>{tag.name}</a>
+                <Link prefetch={!process.env.STORYBOOK} href="/tags/[slug]" as={`/tags/${tag.slug}`}>
+                  <a><PostTag tag={tag.name}/></a>
                 </Link>
               </span>
             ))}
@@ -40,20 +44,23 @@ export default function BlogPreviewCard({ blogpost }) {
             ))}
 
           </p>
-          <p>{blogpost.dateFormatted}</p>
+          <PostDate date={blogpost.dateFormatted}/>
           <hr />
-          <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
+          <Link prefetch={!process.env.STORYBOOK} href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
             <a>
               <h1 className="text-2xl font-bold">
-                {blogpost.title}
+              <PostTitle title={blogpost.title}/>
               </h1>
             </a>
           </Link>
+         
           <div
             className="excerpt py-2"
             dangerouslySetInnerHTML={{ __html: blogpost.excerpt }}
           />
-          <Link href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
+          
+
+          <Link prefetch={!process.env.STORYBOOK} href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
             <a className="">...read more</a>
           </Link>
         </div>

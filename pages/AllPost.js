@@ -1,5 +1,4 @@
 import PostPreviewCard from '../components/PostItem/Postpreviewcard'
-import styles from '../styles/Home.module.css'
 import { getPosts, getPages } from '../api/ghost_data'
 import Layout from '../components/layout'
 import Link from 'next/link'
@@ -71,6 +70,8 @@ export default function AllPost({ posts, pages }) {
       </Banner>
       <Content>
 
+      {/* <PostList post={posts}/> */}
+      
         <ul className='grid grid-cols-4 gap-3 mt-5 mb-8 border-b-2 border-gray-100 border-dotted'>
           {data.map(post => (
             <li>
