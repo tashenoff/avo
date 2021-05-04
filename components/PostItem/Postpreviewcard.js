@@ -13,7 +13,7 @@ console.log({blogpost})
 
     <div className="">
 
-      <div className="flex justify-start md:justify-center items-center">
+      <div className="flex justify-start md:justify-center items-center m-2 ">
         <Link prefetch={!process.env.STORYBOOK} href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>  </Link>
        
         <Image className="object-cover rounded-lg"
@@ -27,9 +27,9 @@ console.log({blogpost})
 
 
       </div>
-      <div className="flex md:pt-4">
-        <div className="ml-5">
-          <p className="text-sm">
+      <div className="flex md:pt-4 m-2">
+        <div className="w-full">
+          <p className="text-sm mb-3">
 
             {blogpost.tags.map((tag) => (
               <span className="mr-3">
@@ -40,12 +40,12 @@ console.log({blogpost})
             ))}
 
             {blogpost.authors.map((author) => (
-              <p>автор {author.name}</p>
+              <span className="text-gray-400">автор {author.name}</span>
             ))}
 
           </p>
           <PostDate date={blogpost.dateFormatted}/>
-          <hr />
+         
           <Link prefetch={!process.env.STORYBOOK} href="/posts/[slug]" as={`/posts/${blogpost.slug}`}>
             <a>
               <h1 className="text-2xl font-bold">

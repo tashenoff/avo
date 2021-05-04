@@ -76,14 +76,14 @@ to place your order.</p>
           <Steps />
         </Banner>
 
-        
-          <div className="flex items-center flex-col mt-10">
-            <H1 isBordered={true} title="21Students’ Feedback about Our Paper Writers" />
-            <p className="w-full text-center mb-10">22We’re always meticulous when it comes to paper writing and feedback we get on it. See what other students have to say about their experience with our essay paper writing service:
+
+        <div className="flex items-center flex-col mt-10">
+          <H1 isBordered={true} title="21Students’ Feedback about Our Paper Writers" />
+          <p className="w-full text-center mb-10">22We’re always meticulous when it comes to paper writing and feedback we get on it. See what other students have to say about their experience with our essay paper writing service:
 </p>
-          </div>
-          <Feedback />
-     
+        </div>
+        <Feedback />
+
 
         <Content className="p-3 flex w-full justify-between items-center">
           <H1 title="Полезные статьи" />
