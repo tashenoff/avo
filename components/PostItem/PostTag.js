@@ -1,6 +1,6 @@
 const PostTag = ({tag}) => {
     return (
-        <div>
+        <div className="text-gray-400">
             {tag}
         </div>
     )

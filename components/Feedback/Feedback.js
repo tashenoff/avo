@@ -1,10 +1,12 @@
 import React from "react";
+import Content from "../Content";
 import FeedbackStarList from "../FeedbackStars/FeedbackStarList";
 import { Data } from "./Data";
 
 
 const Feedback = ({ size }) => {
     return (
+        <Content>
         <div class="grid grid-cols-4 md:grid-cols-4 lg:grid-cols-4 gap-4">
             {Data.map((item, index) => {
                 return (
@@ -26,6 +28,7 @@ const Feedback = ({ size }) => {
                 );
             })}
         </div>
+        </Content>
     );
 };
 

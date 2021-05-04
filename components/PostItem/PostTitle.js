@@ -2,7 +2,7 @@ import React from 'react'
 
 const PostTitle = ({title}) => {
     return (
-        <div>
+        <div className="text-lg mt-3 text-white">
             {title}
         </div>
     )

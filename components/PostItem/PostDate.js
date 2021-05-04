@@ -2,7 +2,7 @@ import React from 'react'
 
 const PostDate = ({date}) => {
     return (
-        <div>
+        <div className="text-gray-400">
             {date}
         </div>
     )
