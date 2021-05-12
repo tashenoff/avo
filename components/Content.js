@@ -4,7 +4,7 @@ import classnames from 'classnames'
 
 const Content = ({children, className}) => {
     const classes = classnames (
-        'xl:container mx-auto',
+        'xl:container mx-auto p-4',
         className
       );
 

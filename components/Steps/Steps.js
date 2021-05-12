@@ -4,7 +4,7 @@ import Ball from '../icons/Ball'
 const Steps = () => {
     return (
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid lg:grid-cols-4 grid-cols-2 gap-4">
             <div className="flex flex-col items-center">
                 <div className="relative bg-white p-5 rounded-full w-20 h-20 flex items-center justify-center">
                     <Ball fill="red" />

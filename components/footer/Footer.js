@@ -19,9 +19,7 @@ export default function Footer() {
             </Link>
           </div>
           <div className="flex w-1/2 justify-end">
-            <div className="px-5">
-              <NavItemList className="flex text-white lg:flex-row flex-col" NavData={Data} />
-            </div>
+           
           </div>
         </div>
       </Content>

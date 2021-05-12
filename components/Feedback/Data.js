@@ -1,11 +1,10 @@
 export const Data=
 [
-    {stars: 5, name: 'Mark Wolberg', title: 'Got my paper!!!', text: 'SO far everything seems to be professional, this is my first time using this kind of online service to get an assignement done. Hoping for the best'},
-    {stars: 3, name: 'Николай Собалев', title: 'Got my paper!!!', text: 'SO far everything seems to be professional, this is my first time using this kind of online service to get an assignement done. Hoping for the best'},
-    {stars: 3, name: 'Ник Пермуов', title: 'Got my paper!!!', text: 'SO far everything seems to be professional, this is my first time using this kind of online service to get an assignement done. Hoping for the best'},
-    {stars: 2, name: 'Джон Рональд', title: 'Got my paper!!!', text: 'SO far everything seems to be professional, this is my first time using this kind of online service to get an assignement done. Hoping for the best'},
-    {stars: 3, name: 'Джон Рональд', title: 'Got my paper!!!', text: 'SO far everything seems to be professional, this is my first time using this kind of online service to get an assignement done. Hoping for the best'},
-    {stars: 1, name: 'Джон Рональд', title: 'Got my paper!!!', text: 'SO far everything seems to be professional, this is my first time using this kind of online service to get an assignement done. Hoping for the best'},
+    {stars: 5, name: 'Phil Collins', img: 'https://assets.website-files.com/5e6bef914570bffc8bc80080/60670c401131820f86d565df_av-1.png', title: 'Got my paper!!!', text: 'I hold over 6 years of experience in academic writing. Being a broadly-skilled professional, I can easily recreate your unique writing style in the essay. And I have an eye for detail, so I always guarantee impeccable quality! Im proficient in the academic fields related to the study of humanities.'},
+    {stars: 3, name: 'Keen Writer', img: 'https://assets.website-files.com/5e6bef914570bffc8bc80080/60670c41bc55de6142527989_av-2.png', title: 'Thanks!', text: 'I have a 100% success rate thanks to always timely delivery and my willingness to go above and beyond to perform work as well as possible. Due to my vast experience in academic writing, I can handle tasks in all disciplines including Nursing and Medicine, English and Literature or Religious Studies.'},
+    {stars: 3, name: 'Writer Joy', img: 'https://assets.website-files.com/5e6bef914570bffc8bc80080/60670c411e19228f27209ec5_av-3.png', title: 'The best service!', text: 'Writing has always been my devotion, ever since college where I completed a Bachelors program in History. I became a freelance writer and found my mission in helping students. American and Asian History is within my area of expertise. I am experienced, skilled, and always guarantee customer satisfaction.'},
+    {stars: 2, name: 'Fabokid', img: 'https://assets.website-files.com/5e6bef914570bffc8bc80080/5e7348c171c03942dc06a9b0_00da8cdf77db575aafc674d8ba5876e3.png', title: 'Sumptuously!', text: 'I am a quality-driven writer with two major areas of focus in Art History and Linguistics. I specialize in writing research papers and essays striving to deliver impeccable quality in the shortest time. I have the skill, knowledge, and experience to make your papers really shine, so don’t hesitate to contact me!'},
+   
    
     
 ]

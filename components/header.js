@@ -7,11 +7,11 @@ export default function Header({ home, children }) {
 
   return (
     <>
-      <Topbar>
+      {/* <Topbar>
         <div >
           topbar
                 </div>
-      </Topbar>
+      </Topbar> */}
   <Navbar />
     </>
   )

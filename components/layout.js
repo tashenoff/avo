@@ -6,7 +6,7 @@ import Head from 'next/head'
 export default function Layout({ home, _title, children, className, title }) {
   return (
     <>
-      <div className="top-40 min-w-full">
+      <div className="top-40 min-w-full md:p-0 lg:p-0">
         <Header home={home} />
 
         <Head>
@@ -14,7 +14,7 @@ export default function Layout({ home, _title, children, className, title }) {
           <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <main>
+        <main className="">
 
           <div
             id="content"
