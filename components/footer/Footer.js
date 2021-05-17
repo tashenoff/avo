@@ -12,15 +12,19 @@ export default function Footer() {
       <Content>
 
         <div className="flex w-full py-4">
-          <div className="flex w-1/2 px-5">
+          <div className="flex w-full px-5 justify-between">
 
-            <Link prefetch={!process.env.STORYBOOK} href="/blogpages/[slug]" as="/blogpages/copyright">
+            <Link prefetch={!process.env.STORYBOOK} href="#" as="#">
               <a className="text-white">Copyright</a>
             </Link>
+            <Link prefetch={!process.env.STORYBOOK} href="/terms" as="/terms">
+            <a className="text-white">Terms of use</a>
+            </Link>
+
+
+            
           </div>
-          <div className="flex w-1/2 justify-end">
-           
-          </div>
+      
         </div>
       </Content>
     </footer>

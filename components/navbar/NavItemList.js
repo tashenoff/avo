@@ -6,7 +6,7 @@ const NavItemList = ({ NavData, className }) => {
         <div className={className}>
             {NavData.map((item, index) => {
                 return (
-                    <NavItem link={item.link} label={item.label} />
+                    <NavItem className="w-full" link={item.link} label={item.label} />
                 );
             })}
 

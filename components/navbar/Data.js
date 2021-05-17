@@ -4,6 +4,9 @@ export const Data=[
     },
     {
         label: 'О нас', link: '/About'
+    },
+    {
+        label: 'Контакты', link: '/contacts'
     }
 
 ]

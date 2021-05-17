@@ -27,19 +27,19 @@ export default function Home({ pages }) {
       <Layout
         home _title="My Ghost Blog">
         <Banner title_banner="ddd"
-          className='bg-new-green relative text-new-blue h-96 flex flex-col items-center justify-between  dark:bg-dark-blue dark:text-white'>
-          <div className="flex w-full lg:absolute -bottom-10 justify-between container items-center">
+          className='h-96 flex flex-col items-center justify-between  bg-dark-blue text-white'>
+          <div className="flex w-full lg:absolute lg:top-40 justify-between container items-center">
             <div className="flex flex-col max-w-3xl lg:p-0 p-3">
-              <H1 className="text-center lg:text-left" title="11Essay writing service for students" />
-              <p class="py-5 lg:w-1/2 w-full">7Academic writing is difficult, and at Writix, we only work with the best of the best when it comes to our writers.</p>
+              <H1 className="lg:p-5 py-5 lg:text-left" title=" Услуги написания ЭССЭ для студентов" />
+              <p class="lg:p-5 py-5 lg:w-1/2 w-full">Наши 726 писателей уже онлайн и готовы помочь вам.</p>
               <PlaceOrder className="bg-light-blue bottom-0 lg:w-1/1 w-full p-3 lg:p-5 rounded-lg ">
                 <Form className="flex flex-col w-full pt-5 lg:pt-0 " >
                   <div className="flex w-full flex-col lg:flex-row ">
                     <Select className="bg-white mb-3 lg:mb-0 mr-4 h-full  w-full" />
-                    <Input placeholder="3Email" className="bg-white mr-4 h-full w-full" />
-                    <Button className="bg-orange lg:w-1/2 w-full mt-5 lg:mt-0" title="5Place an order" />
+                    <Input placeholder="Почта" className="bg-white mr-4 h-full w-full" />
+                    <Button className="bg-orange lg:w-1/2 w-full mt-5 lg:mt-0" title="Заказать" />
                   </div>
-                  <p class="py-2 text-sm mt-5">4By clicking “Place an order”, you agree to our terms of service and privacy policy. We’ll occasionally send you promo and account related emails.</p>
+                  <p class="py-2 text-sm mt-5 text-white ">Нажимая «Разместить заказ», вы соглашаетесь с нашими условиями обслуживания и политикой конфиденциальности. Время от времени мы будем присылать вам рекламные сообщения и письма, связанные с аккаунтом.</p>
                 </Form>
               </PlaceOrder>
             </div>
@@ -50,35 +50,33 @@ export default function Home({ pages }) {
 
         </Banner>
 
-        <Content className="py-10 lg:mt-0 mt-20 lg:top-5 relative top-20">
-          <H1 isBordered={true} title="16The best of the best writers" />
-          <p className="py-5">
-            17Academic writing is difficult, and at Writix, we only work with the best of the best when it comes to our writers.
-            </p>
+        <Content className="py-10 lg:mt-0 mt-40 lg:top-5 relative top-20">
+          <H1 isBordered={true} title="Лучшие эксперты" />
+   
+          <p className="py-5 w-full">Essay365 - это служба написания статей, которую вы так долго искали. Мы поможем вам в написании эссе и университетских работ разной сложности. Наши эксперты по написанию статей  всегда на связи, что бы помочь вам написать работу на бесконечное множество тем с гарантией качества. </p>
 
-          <p className="py-5 w-full">We make sure to provide 100% unique papers of the highest quality. All papers are double-checked for mistakes and plagiarism before delivery. First of all, we check for duplicate content on the web and then in our database of completed orders. Feel free to request free revisions of your order, and we will adjust it to your requirements.We won’t take your money until you are happy with a result.</p>
+          <MinBanner className="bg-new-blue my-5 text-white rounded-lg lg:flex-row flex-col">
 
-          <MinBanner className="bg-new-blue text-white rounded-lg lg:flex-row flex-col">
-
-            <p className="w-full lg:pb-0 pb-5">We provide an essay writing service for all types of academic
-            assignments.<br/> Check out some of our samples and don't hesitate
-to place your order.</p>
-            <Button title="Кнопка" className="bg-new-green" onClick={() => { console.log('clicked') }} />
+            <p className="w-full lg:pb-0 pb-5">Мы предоставляем услуги по написанию эссе для всех типов академических
+задания. <br/>Ознакомьтесь с некоторыми из наших образцов и не сомневайтесь
+разместить заказ.</p>
+            <Button title="Нанять специалиста" className="bg-new-green lg:w-1/4" onClick={() => { console.log('clicked') }} />
             
           </MinBanner>
         </Content >
         <Banner
-          className='bg-new-green h-80 flex items-center justify-center lg:mt-0 mt-20  dark:bg-new-blue dark:text-white'>
+          className='h-80 flex items-center justify-center lg:mt-0 mt-20 lg:py-20 py-60  bg-new-blue text-white'>
 
           <Steps />
         </Banner>
 
-
-        <div className="flex items-center flex-col mt-10">
-          <H1 className="mt-5 lg:mt-0 relative lg:p-0 p-5" isBordered={true} title="21Students’ Feedback about Our Paper Writers" />
-          <p className="w-full text-center mb-10 lg:p-0 p-5">22We’re always meticulous when it comes to paper writing and feedback we get on it. See what other students have to say about their experience with our essay paper writing service:
+        <Content >
+        <div className="flex flex-col mt-10 lg:p-0 p-5">
+        <H1 isBordered={true} title="Отзывы" />
+          <p className="w-full mb-10 lg:p-0">Мы работаем только с лучшими из лучших, когда речь идет о наших писателях.
 </p>
         </div>
+        </Content >
         <Feedback />
 
 

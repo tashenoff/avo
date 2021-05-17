@@ -5,7 +5,7 @@ import Layout from "../components/layout";
 const About = () => {
     return (
         <Layout>
-            <Content>
+            <Content className="h-screen">
             <H1 isBordered={true} title="About us" />
                 <p>
                 Essay365 — remote work exchange for professional writers. We help customers find specialists to complete tasks, and help freelancers get orders.
