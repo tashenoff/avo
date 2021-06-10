@@ -49,7 +49,9 @@ const Navbar = () => {
                         ">
 
               <NavItemList className="text-white w-1/2 text-lg lg:text-sm lg:w-full flex lg:flex-row flex-col items-center" NavData={Data} />
-              <Button variant="bg-new-green lg:mt-0 mt-10 w-1/2 lg:w-full " title="Войти" />
+             <a className="bg-new-green lg:mt-0 mt-10 w-1/2 lg:w-full rounded-lg text-center" href="https://theessay365.com/profile/accounts/login/">   <Button title="Войти" /></a>
+             <a className="bg-orange lg:mt-0 mt-10 w-1/2 lg:w-full lg:ml-5 rounded-lg text-center" href="https://theessay365.com/profile/client/registration/">   <Button title="Регистрация" /></a>
+             
             </div>
           </div>
         </div>

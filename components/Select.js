@@ -13,9 +13,9 @@ const Select = ({className, ...props}) => {
     return (
         <select className={classes}>
         <option value="option1">ЭССЭ (Все категории)</option>
-        <option value="option2">option2</option>
-        <option selected value="option3">option3</option>
-        <option value="option4">option4</option>
+        <option value="option2">Написание сочинений</option>
+        <option selected value="option3">Бизнес план</option>
+        <option value="option4">Биография</option>
       </select>
     )
 }
