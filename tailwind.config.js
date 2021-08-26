@@ -15,6 +15,7 @@ module.exports = {
       colors: {
         'new-blue': '#404773',
         'new-green': '#25D293',
+        'green-hover': '#25b783',
         'light-blue': '#404773',
         'dark-blue': '#282F4C',
         'orange': '#F3795F'

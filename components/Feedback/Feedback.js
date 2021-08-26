@@ -7,7 +7,7 @@ import { Data } from "./Data";
 const Feedback = ({ size }) => {
     return (
         <Content>
-        <div class="grid md:grid-cols-4 grid-cols-1 lg:grid-cols-4 gap-4">
+        <div class="grid md:grid-cols-4 grid-cols-1 lg:grid-cols-4 gap-0">
             {Data.map((item, index) => {
                 return (
                     <div className="bg-white text-gray-900 p-5 rounded-lg">

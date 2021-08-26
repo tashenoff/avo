@@ -37,7 +37,7 @@ export default function Home({ pages }) {
                   <div className="flex w-full flex-col lg:flex-row ">
                     <Select className="bg-white mb-3 lg:mb-0 mr-4 h-full  w-full" />
                     <Input placeholder="Почта" className="bg-white mr-4 h-full w-full" />
-                    <Button className="bg-orange lg:w-1/2 w-full mt-5 lg:mt-0" title="Заказать" />
+                    <a href="https://theessay365.com/profile/client/registration/" className="bg-orange lg:w-1/2 w-full mt-5 lg:mt-0 rounded-lg text-center hover:bg-red-500 transition-colors"><Button title="Заказать" /></a>
                   </div>
                   <p class="py-2 text-sm mt-5 text-white ">Нажимая «Разместить заказ», вы соглашаетесь с нашими условиями обслуживания и политикой конфиденциальности. Время от времени мы будем присылать вам рекламные сообщения и письма, связанные с аккаунтом.</p>
                 </Form>
@@ -60,7 +60,7 @@ export default function Home({ pages }) {
             <p className="w-full lg:pb-0 pb-5">Мы предоставляем услуги по написанию эссе для всех типов академических
 задания. <br/>Ознакомьтесь с некоторыми из наших образцов и не сомневайтесь
 разместить заказ.</p>
-            <Button title="Нанять специалиста" className="bg-new-green lg:w-1/4" onClick={() => { console.log('clicked') }} />
+           <a className="bg-new-green hover:bg-green-hover transition-colors lg:mt-0 mt-10 w-1/2 lg:w-1/4 rounded-lg text-center" href="https://theessay365.com/profile/client/registration/"><Button title="Нанять специалиста"/></a>
             
           </MinBanner>
         </Content >

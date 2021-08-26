@@ -1,3 +1,4 @@
+import Banner from "../components/Banner";
 import Content from "../components/Content";
 import H1 from "../components/H1";
 import Layout from "../components/layout";
@@ -5,10 +6,17 @@ import Layout from "../components/layout";
 const About = () => {
     return (
         <Layout>
+               <Banner className="h-40 flex flex-col items-center justify-between  bg-dark-blue text-white">
+                   <Content>
+               <H1 isBordered={false} title="About us" />
+               </Content>
+                   </Banner>
             <Content className="h-screen">
-            <H1 isBordered={true} title="About us" />
-                <p>
-                Essay365 — remote work exchange for professional writers. We help customers find specialists to complete tasks, and help freelancers get orders.
+           
+         
+
+                <p className="mt-5">
+                <b>Essay365</b> — remote work exchange for professional writers. We help customers find specialists to complete tasks, and help freelancers get orders.
 
 The remote work format attracts an increasing number of freelancers and customers. Remote work is the future, and we do everything to make it as comfortable as possible.
 
